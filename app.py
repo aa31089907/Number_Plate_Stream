@@ -11,7 +11,7 @@ import os
 from  streamlit_webrtc import webrtc_streamer
 import av
 
-set_background("./imgs/background.png")
+set_background("./imgs/background.jpg")
 
 folder_path = "./licenses_plates_imgs_detected/"
 LICENSE_MODEL_DETECTION_DIR = './models/license_plate_detector.pt'
@@ -181,7 +181,7 @@ with header :
 
     _, col5, _ = st.columns([0.05,1,0.1])
 
-    st.write("The differents models detect the car and the license plate in a given image, then extracts the info about the license using EasyOCR, and crop and save the license plate as a Image, with a CSV file with all the data.   ")
+    st.write("First, different models are used to find cars and their license plates in an image. Then, EasyOCR helps extract information from the license plates. After that, the license plate is cropped and saved as an image file, and all the data is stored in a CSV file.   ")
 
 
 with body :
